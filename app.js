@@ -4,6 +4,7 @@ const btnReset = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
 let missed = 0;
 
+
 let phrases = [
   "Happy New Year",
   "Merry Christmas",
@@ -16,27 +17,29 @@ btnReset.addEventListener ('click', () => {
   overlay.style.display = 'none';
 } );
 
+
 function getRandomPhraseAsArray (arr){
   const randomNumber = Math.floor(Math.random() * phrases.length);
-  const randomPhrase = phrases (randomNumber);
-  const phraseAsCharacters = randomPhrase.split(' ');
+  const randomPhrase = phrases [randomNumber];
+  const phraseAsCharacters = randomPhrase.split('');
   return phraseAsCharacters;
 }
 
-const phraseArray = getRandomPhraseAsArray(phrases);
-document.addPhrasetoDisplay(phraseArray);
-
 function addPhraseToDisplay (arr) {
 
-  for ()
+  for (let i = 0; i < phrases.length; i++) {
+    const li = phrases[i];
+    const liPhrase = document.createElement('li');
+    liPhrase.textContent = li;
+    const ul = document.querySelector('#phrase ul');
+    ul.appendChild (liPhrase); 
 
-  const li = document.createElement('li');
-  li.textContent = text;
-  ul.appendChild (li); 
-  li.classList.add("letter");
-  return getRandomPhraseAsArray;
-  
-   
-
-
+    if (li !== " ") {
+      liPhrase.classList.add('letter');
+    } else if (li === " ") {
+      liPhrase.classList.add('space');
+    }
+  }
+  const phraseArray = getRandomPhraseAsArray(phrases);
+  addPhraseToDisplay(phraseArray);
 }
