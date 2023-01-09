@@ -22,3 +22,21 @@ function getRandomPhraseAsArray (arr){
   const phraseAsCharacters = randomPhrase.split(' ');
   return phraseAsCharacters;
 }
+
+const phraseArray = getRandomPhraseAsArray(phrases);
+document.addPhrasetoDisplay(phraseArray);
+
+function addPhraseToDisplay (arr) {
+
+  for ()
+
+  const li = document.createElement('li');
+  li.textContent = text;
+  ul.appendChild (li); 
+  li.classList.add("letter");
+  return getRandomPhraseAsArray;
+  
+   
+
+
+}
