@@ -25,6 +25,8 @@ function getRandomPhraseAsArray (arr){
   return phraseAsCharacters;
 }
 
+const phraseArray = getRandomPhraseAsArray(phrases);
+
 function addPhraseToDisplay (arr) {
 
   for (let i = 0; i < phrases.length; i++) {
@@ -40,6 +42,5 @@ function addPhraseToDisplay (arr) {
       liPhrase.classList.add('space');
     }
   }
-  const phraseArray = getRandomPhraseAsArray(phrases);
-  addPhraseToDisplay(phraseArray);
 }
+addPhraseToDisplay(phraseArray);
