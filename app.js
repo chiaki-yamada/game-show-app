@@ -44,3 +44,16 @@ function addPhraseToDisplay (arr) {
   }
 }
 addPhraseToDisplay(phraseArray);
+
+
+const checkLetter = button => {
+  const checkLetter = document.querySelectorAll('li');
+  const match = null;
+  for (let i = 0; i < checkLetter.length; i++) {
+    if (checkLetter[i].textContent === button) {   
+        checkLetter[i].classList.add('show');   
+        match = button;
+    }
+  } 
+  return match;
+}
