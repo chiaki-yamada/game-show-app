@@ -6,11 +6,11 @@ let missed = 0;
 
 
 let phrases = [
-  "Happy New Year",
-  "Merry Christmas",
-  "Happy Birthday",
-  "Happy Halloween",
-  "Happy Thanksgiving" 
+  "happy new year",
+  "merry christmas",
+  "happy birthday",
+  "happy halloween",
+  "happy thanksgiving" 
 ];
 
 btnReset.addEventListener ('click', () => {
