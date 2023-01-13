@@ -29,8 +29,8 @@ const phraseArray = getRandomPhraseAsArray(phrases);
 
 function addPhraseToDisplay (arr) {
 
-  for (let i = 0; i < phrases.length; i++) {
-    const li = phrases[i];
+  for (let i = 0; i < phraseArray.length; i++) {
+    const li = phraseArray[i];
     const liPhrase = document.createElement('li');
     liPhrase.textContent = li;
     const ul = document.querySelector('#phrase ul');
@@ -47,11 +47,11 @@ addPhraseToDisplay(phraseArray);
 
 
 const checkLetter = button => {
-  const checkLetter = document.querySelectorAll('li');
-  const match = null;
-  for (let i = 0; i < checkLetter.length; i++) {
-    if (checkLetter[i].textContent === button) {   
-        checkLetter[i].classList.add('show');   
+  const letters = document.querySelectorAll('#phrase li');
+  let match = null;
+  for (let i = 0; i < letters.length; i++) {
+    if (letters[i].textContent === button) {   
+        letters[i].classList.add('show');   
         match = button;
     }
   } 
